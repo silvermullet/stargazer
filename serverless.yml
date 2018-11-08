@@ -1,0 +1,13 @@
+service: stargazer
+
+provider:
+  name: aws
+  runtime: python3
+  environment:
+    WEBHOOK_URL: "${opt:slack_webhook_url}"
+
+functions:
+  stargazer:
+    handler: handler.stargazer
+    events:
+      - http: POST stargazer
