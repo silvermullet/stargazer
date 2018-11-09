@@ -27,7 +27,11 @@ def stargazer(event, context):
             json=slack_post_data,
             headers={'Content-Type': 'application/json'}
         )
-        return r.status_code
+        return {
+            'request-return-code': r.status_code
+        }
     except requests.exceptions.RequestException as err:
         err_message = f'RequestException: {err}'
-        return err_message
+        return {
+            'error': err_message
+        }
