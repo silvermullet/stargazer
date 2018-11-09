@@ -7,6 +7,18 @@ Serverless API endpoint for those who need to power up their GitHub vanity star 
 GitHub webhook [WatchEvents](https://developer.github.com/v3/activity/events/types/#watchevent) posted nicely to your Slack channel of choice
 
 
+### Requirements
+
+[NodeJS](https://nodejs.org/en/download/)
+[Serverless](https://serverless.com/framework/docs/providers/aws/guide/installation/)
+[serverless-python-requirements](https://www.npmjs.com/package/serverless-python-requirements)
+[Docker](https://docs.docker.com/install/)
+
+```
+#Install serverless-python-requirements
+npm install serverless-python-requirements
+```
+
 ### Deploy stargazer
 
 First go to your Slack account and get the webhook setup for your room you want to publish messages into
