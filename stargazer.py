@@ -28,10 +28,12 @@ def stargazer(event, context):
             headers={'Content-Type': 'application/json'}
         )
         return {
-            'request-return-code': r.status_code
+            "statusCode": 200,
+            "body": r.text
         }
     except requests.exceptions.RequestException as err:
         err_message = f'RequestException: {err}'
         return {
+            "statusCode": 500,
             'error': err_message
         }
