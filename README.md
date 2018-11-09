@@ -10,8 +10,11 @@ GitHub webhook [WatchEvents](https://developer.github.com/v3/activity/events/typ
 ### Requirements
 
 [NodeJS](https://nodejs.org/en/download/)
+
 [Serverless](https://serverless.com/framework/docs/providers/aws/guide/installation/)
+
 [serverless-python-requirements](https://www.npmjs.com/package/serverless-python-requirements)
+
 [Docker](https://docs.docker.com/install/)
 
 ```
