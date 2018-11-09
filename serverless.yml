@@ -1,13 +1,21 @@
 service: stargazer
 
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+
 provider:
   name: aws
-  runtime: python3
+  runtime: python3.6
+  region: us-west-2
   environment:
     WEBHOOK_URL: "${opt:slack_webhook_url}"
 
 functions:
   stargazer:
-    handler: handler.stargazer
+    handler: stargazer.stargazer
     events:
       - http: POST stargazer
